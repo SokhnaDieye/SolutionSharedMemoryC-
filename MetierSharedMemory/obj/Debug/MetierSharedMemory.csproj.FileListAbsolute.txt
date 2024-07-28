@@ -1,0 +1,7 @@
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\bin\MetierSharedMemory.dll.config
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\bin\MetierSharedMemory.dll
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\bin\MetierSharedMemory.pdb
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\obj\Debug\MetierSharedMemory.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\obj\Debug\MetierSharedMemory.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\obj\Debug\MetierSharedMemory.dll
+C:\Users\HP\source\repos\SolutionSharedMemory2\MetierSharedMemory\obj\Debug\MetierSharedMemory.pdb
