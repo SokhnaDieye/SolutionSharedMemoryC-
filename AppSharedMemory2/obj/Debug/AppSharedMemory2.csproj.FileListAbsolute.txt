@@ -7,3 +7,4 @@ C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSha
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.exe
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.pdb
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.FrmJury.resources
