@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -53,16 +56,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="FrmCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategorie.Designer.cs">
+      <DependentUpon>FrmCategorie.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmJury.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmJury.Designer.cs">
       <DependentUpon>FrmJury.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUtilisateur.Designer.cs">
+      <DependentUpon>FrmUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Categorie.cs" />
+    <Compile Include="Model\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CategorieService.cs" />
+    <Compile Include="Service\UtilisateurServices.cs" />
+    <EmbeddedResource Include="FrmCategorie.resx">
+      <DependentUpon>FrmCategorie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmJury.resx">
       <DependentUpon>FrmJury.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUtilisateur.resx">
+      <DependentUpon>FrmUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +117,7 @@
     <None Include="Connected Services\ServiceMetier\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

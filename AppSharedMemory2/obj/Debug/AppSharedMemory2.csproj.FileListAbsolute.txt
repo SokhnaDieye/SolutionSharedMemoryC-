@@ -8,3 +8,8 @@ C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSha
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.exe
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.pdb
 C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.FrmJury.resources
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.FrmCategorie.resources
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.csproj.CopyComplete
+C:\Users\HP\source\repos\SolutionSharedMemory2\AppSharedMemory2\obj\Debug\AppSharedMemory2.FrmUtilisateur.resources

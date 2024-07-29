@@ -1,0 +1,9 @@
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\bin\Debug\ServiceSendMail.exe.config
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\bin\Debug\ServiceSendMail.exe
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\bin\Debug\ServiceSendMail.pdb
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceNotification.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceSendMail.ProjectInstaller.resources
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceNotification.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceNotification.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceSendMail.exe
+C:\Users\HP\source\repos\SolutionSharedMemory2\ServiceSendMail\obj\Debug\ServiceSendMail.pdb

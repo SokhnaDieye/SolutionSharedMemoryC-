@@ -16,7 +16,9 @@ namespace AppSharedMemory2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmJury());
+            /*Application.Run(new FrmJury());*/
+            /*Application.Run(new FrmCategorie());*/
+            Application.Run(new FrmUtilisateur());
         }
     }
 }
