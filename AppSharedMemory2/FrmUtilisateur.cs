@@ -14,35 +14,16 @@ using System.Xml.Linq;
 using AppSharedMemory2.Model;
 using ApiMtier.Controllers;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
+using AppSharedMemory2.Service;
 
 namespace AppSharedMemory2
 {
     public partial class FrmUtilisateur : Form
     {
-        WebClient client=new WebClient();
-        NameValueCollection dataSend=new NameValueCollection();
+        UtilisateurServices utilisateurService = new UtilisateurServices();
         public FrmUtilisateur()
         {
             InitializeComponent();
-        }
-
-        private void btnAjouter_Click(object sender, EventArgs e)
-        {
-            dataSend["nom"] = txtNom.Text; 
-            dataSend["prenom"] = txtPrenom.Text;
-            dataSend["age"] = txtAge.Text;
-
-            try
-            {
-               
-                client.UploadValues("http://localhost/backend/create.php", "POST", dataSend);
-                resetForm();
-                Effacer();
-            }
-            catch (WebException ex)
-            {
-                MessageBox.Show("Errer: " + ex.Message);
-            }
         }
 
         private void FrmUtilisateur_Load(object sender, EventArgs e)
@@ -51,53 +32,7 @@ namespace AppSharedMemory2
         }
         public void resetForm()
         {
-            try
-            {
-                string response = client.DownloadString("http://localhost/backend/list.php");
-                var data = JsonConvert.DeserializeObject<List<Utilisateur>>(response);
-                dgUtilisateur.DataSource = data;
-            }
-            catch (WebException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-        private void btnModifier_Click(object sender, EventArgs e)
-        {
-            dataSend["id"] = txtId.Text;
-            dataSend["nom"] = txtNom.Text;
-            dataSend["prenom"] = txtPrenom.Text;
-            dataSend["age"] = txtAge.Text;
-
-            try
-            {
-                client.UploadValues("http://localhost/backend/Update.php", "POST", dataSend);
-                resetForm();
-                Effacer();
-            }
-            catch (WebException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-        private void btnSupprimer_Click(object sender, EventArgs e)
-        {
-            dataSend["id"] = txtId.Text;
-
-            try
-            {
-                
-               client.UploadValues("http://localhost/backend/Delete.php", "POST", dataSend);
-               resetForm();
-                Effacer();
-            }
-            catch (WebException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-
+            dgUtilisateur.DataSource = utilisateurService.servGetListUtilisateur();
         }
 
         private void Select(object sender, DataGridViewCellEventArgs e)
@@ -114,6 +49,56 @@ namespace AppSharedMemory2
             txtNom.Text="";
             txtPrenom.Text="";
             txtAge.Text = "";
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            Utilisateur u = new Utilisateur();
+            u.Nom = txtNom.Text;
+            u.Prenom = txtPrenom.Text;
+            u.Age = int.Parse(txtAge.Text);
+            utilisateurService.AddUtilisateur(u);
+            resetForm();
+            Effacer();
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dgUtilisateur.CurrentRow.Cells[0].Value.ToString());
+            Utilisateur u = new Utilisateur();
+            u.Id = id;
+            u.Nom = txtNom.Text;
+            u.Prenom = txtPrenom.Text;
+            u.Age = int.Parse(txtAge.Text);
+            utilisateurService.UpdateUtilisateur(u);
+            resetForm();
+            Effacer();
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dgUtilisateur.CurrentRow.Cells[0].Value.ToString());
+            Utilisateur u = new Utilisateur { Id = id };
+
+            bool result = utilisateurService.DeleteUtilisateur(u);
+            if (result)
+            {
+                Console.WriteLine($"identifiant:  {u.Id}");
+                MessageBox.Show("Utilisateur supprimé avec succès ");
+                resetForm();
+                Effacer();
+            }
+            else
+            {
+                MessageBox.Show("Erreur lors de la suppression de l'utilisateur");
+            }
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            txtNom.Text = dgUtilisateur.CurrentRow.Cells[1].Value.ToString();
+            txtPrenom.Text = dgUtilisateur.CurrentRow.Cells[2].Value.ToString();
+            txtAge.Text= dgUtilisateur.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }

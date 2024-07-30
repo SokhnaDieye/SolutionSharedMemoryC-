@@ -39,6 +39,7 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgUtilisateur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,12 +151,25 @@
             this.txtId.TabIndex = 26;
             this.txtId.Visible = false;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSelect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSelect.Location = new System.Drawing.Point(243, 12);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(102, 47);
+            this.btnSelect.TabIndex = 27;
+            this.btnSelect.Text = "&Select";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // FrmUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 669);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label3);
@@ -189,5 +203,6 @@
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnSelect;
     }
 }
